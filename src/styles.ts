@@ -74,22 +74,95 @@ export const Card = styled.div<{ $pokemonType: string }>`
   h3, h2 { text-transform: capitalize; margin: 10px 0; }
 `;
 
+export const HeaderDetails = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+`;
 
 export const BotaoVoltar = styled.button`
-  padding: 10px 20px;
-  margin-bottom: 20px;
+  background: rgb(255, 1, 191);
+  color: white;
+  border: 1px solid rgb(255, 128, 191);
+  padding: 8px 16px;
+  border-radius: 10px;
   cursor: pointer;
-  border-radius: 25px;
+`;
+
+export const ButtonFavorite = styled(motion.button)<{ $isFavorite: boolean }>`
+  background: ${props => props.$isFavorite ? '#2e2e2e' : 'rgba(255, 255, 255, 0.1)'};
   border: none;
-  font-weight: bold;
-  background-color: #ffa0d4;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 22px;
 `;
 
 export const DetalhesInfo = styled.div`
   margin-top: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  border-radius: 12px;
   text-align: left;
-  background: rgba(255, 255, 255, 0.3);
+`;
+
+export const FavoritesSection = styled.section`
+  margin-bottom: 40px;
   padding: 20px;
+  background: rgba(255, 215, 0, 0.05);
   border-radius: 15px;
-  line-height: 1.6;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+`;
+
+export const FavTitle = styled.h2`
+  color: #ffd700;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const FavoritesList = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+`;
+
+export const FavoriteTag = styled.div`
+  background: #ffd700;
+  color: #000;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 14px;
+  `;
+
+  export const MainTitle = styled.h1`
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  `;
+  
+  export const LoadingText = styled.p`
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+`;
+
+export const PokemonImage = styled.img`
+  width: 200px;
+`;
+
+export const DetailsCard = styled(Card)`
+  cursor: default;
+  max-width: 500px;
+  margin: 0 auto;
+`;
+
+export const PokemonTitle = styled.h2`  
+  text-transform: capitalize;
 `;
